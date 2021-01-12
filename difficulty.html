@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>難易度選択画面</title>
+  <link rel="stylesheet" href="difficulty.css">
+</head>
+<body>
+  <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader">
+  <div>
+    <h1 id="invader">スペースインベーダー</h1>
+    <h2>難易度選択</h2>
+    <input type="button" value="Easy" onclick="easy()" class="easy">
+    <input type="button" value="Normal" onclick="normal()" class="normal">
+    <input type="button" value="Hard" onclick="hard()" class="hard">
+  </div>
+  
+  <script>
+    function easy() {
+      location.href = "easy.html";
+    }
+    function normal() {
+      location.href = "normal.html";
+    }
+    
+    // --------------------------------
+    // function hard() {
+    //   location.href = "hard.html";
+    // }
+    // --------------------------------
+
+    // window.onload = function(){
+    //   settimeout(invadertimer, 1000);
+    // }
+
+    // let invader = document.getElementById('invader');
+    //   invader.style.display = 'none';
+    //   let invadertimer = function () {
+    //     if (invader.style.display == 'none') {
+    //       invader.style.display = 'flex';
+    //     }
+    //   }
+  </script>
+</body>
+</html>

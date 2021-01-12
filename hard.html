@@ -1,0 +1,166 @@
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>インベーダーゲーム</title>
+  <link rel="stylesheet" href="hard.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body id="shot" class="stop">
+
+  <!-- 戦闘機とレーザービーム -->
+  <div id="player" class="display-none">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSxIgAm-oWFcABeQxb00ngj4YO8XSyrqqoaFgUZFZqIox8BvJ4-&usqp=CAU"
+      alt="戦闘機" class="plane">
+
+    <!-- レーザーの種類 -->
+    <div class="laser" id="laser"></div>
+    <div id="laser2"></div>
+    <div id="laser3"></div>
+    <div id="laser100"></div>
+  </div>
+
+
+  <audio class="btnsound" preload="auto">
+    <source src="mp3/shot.mp3" type="audio/mp3">
+  </audio>
+
+
+  <div id="invader1">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader7">
+  </div>
+
+  <div id="invader2">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader1">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader2">
+    <img src="https://gsacademy.tokyo/fukuoka/images/header_title.png" alt="G's" class="gs">
+    <img src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/images/spaceinvaders.jpeg"
+      alt="インベーダーA" class="invaderA6">
+  </div>
+
+  <div id="invader3">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader4">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader5">
+    <img src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/images/spaceinvaders.jpeg"
+      alt="インベーダーA" class="invaderA8">
+    <img src="https://decaldesignshop.com/wp-content/uploads/2013/05/space_invaders2-b.jpg" alt="インベーダーB"
+      class="invaderB9">
+  </div>
+
+  <div id="invader4">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader1">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader2">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader3">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader5">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader6">
+    <img src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/images/spaceinvaders.jpeg"
+      alt="インベーダーA" class="invaderA9">
+  </div>
+
+  <div id="invader5">
+    <img src="https://decaldesignshop.com/wp-content/uploads/2013/05/space_invaders2-b.jpg" alt="インベーダーB"
+      class="invaderB1">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader2">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader3">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader5">
+    <img src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/images/spaceinvaders.jpeg"
+      alt="インベーダーA" class="invaderA7">
+    <img src="https://decaldesignshop.com/wp-content/uploads/2013/05/space_invaders2-b.jpg" alt="インベーダーB"
+      class="invaderB6">
+  </div>
+
+  <div id="invader6">
+    <img src="https://decaldesignshop.com/wp-content/uploads/2013/05/space_invaders2-b.jpg" alt="インベーダーB"
+      class="invaderB4">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader5">
+    <img src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/images/spaceinvaders.jpeg"
+      alt="インベーダーA" class="invaderA6">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader7">
+  </div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Space_invaders_character_3.jpeg" alt="インベーダーC"
+    class="invaderC">
+
+  <div id="invader7">
+    <img src="https://pbs.twimg.com/profile_images/479358496203239425/k073mZjv.jpeg" alt="インベーダー" class="invader4">
+    <img src="https://decaldesignshop.com/wp-content/uploads/2013/05/space_invaders2-b.jpg" alt="インベーダーB"
+      class="invaderB5">
+    <img src="https://decaldesignshop.com/wp-content/uploads/2013/05/space_invaders2-b.jpg" alt="インベーダーB"
+      class="invaderB6">
+    <img src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/images/spaceinvaders.jpeg"
+      alt="インベーダーA" class="invaderA7">
+  </div>
+
+  <div id="invader8">
+    <img src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/images/spaceinvaders.jpeg"
+      alt="インベーダーA" class="invaderA4">
+    <img src="https://decaldesignshop.com/wp-content/uploads/2013/05/space_invaders2-b.jpg" alt="インベーダーB"
+      class="invaderB5">
+    <img src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/images/spaceinvaders.jpeg"
+      alt="インベーダーA" class="invaderA6">
+    <img src="https://decaldesignshop.com/wp-content/uploads/2013/05/space_invaders2-b.jpg" alt="インベーダーB"
+      class="invaderB7">
+  </div>
+
+
+
+  <!-- ジャンケンボタン(グー・チョキ・パー) -->
+  <div class="janken" id="janken">
+    <span>
+      <input type="image" name=""
+        src="https://3.bp.blogspot.com/-ddxthgZW4kI/V2ub9fWGyTI/AAAAAAAA7to/gTB-dajOTbQWLfgw0Le-qDZ6x-OpezTAQCLcB/s400/kaizoku_takarabako.png"
+        id="closeGift">
+      <img src="https://1.bp.blogspot.com/-abtG2HYMsA8/UU--5kLFD0I/AAAAAAAAO_w/ta20nlofB6Y/s400/kaizoku_takara.png"
+        alt="" id="openGift">
+      <img
+        src="https://1.bp.blogspot.com/-_8wJqUxj-d4/W4PJlko8nmI/AAAAAAABOIc/Z-MzXgFr2OkbWRKja484G8tVn74a80h5QCLcBGAs/s400/character_game_mimic.png"
+        alt="" id="openLost">
+
+      <img src="https://stockmaterial.net/wp/wp-content/uploads/img/other_bomb01_01.png" alt="爆弾" id="bom">
+      <img
+        src="https://lh3.googleusercontent.com/proxy/Jx__4llaT9oCUqibepDHs7qAbf1Al8BA--gKJl9JuTKTPma3gPBLZ5VYbuY7hnl_mrBcE2djTqUQrR8j7Jd9fa23E2J2wFe5EpMcQkjX0T3sVs8yaHgoFojuBgF2O6G-vsW2S-swuH6Z42IsOvgJPhI6tSabaaUFAU5NFZseqXFiLkOfnp16RaQom4vUld-kKjEsZ0cGP6mWlTTScK3Mc1SWSc7vQlUOsM0ybcMMtDU0tByh0aNtTjx2fB1ydf2pAd4"
+        alt="アダルト雑誌" id="magazine">
+      <img
+        src="https://stat.ameba.jp/user_images/20100126/17/aizawa-m/90/00/j/t02200391_0480085410389735224.jpg?caw=800"
+        alt="AV" id="AV">
+      <img src="https://d2dcan0armyq93.cloudfront.net/photo/odai/400/e32c1d64c56486a8be6026000b58cf46_400.jpg"
+        alt="アダルトなおもちゃ" id="toy">
+    </span>
+
+    <!-- 結果表示(相手の手) -->
+    <div id="result">宝箱を開けてみよう！</div>
+
+    <div id="result2">結果は？</div>
+
+  </div>
+
+  <!-- スタートボタン -->
+  <div class="center">
+    <h1 class="title">インベーダー <br> ＧＡＭＥ</h1>
+    <div class="start-btn">
+      <input type="button" value="START" id="startbtn">
+    </div>
+  </div>
+
+  <!-- ゲームオーバー画面 -->
+  <div class="game_over">
+    <h1>GAME OVER</h1>
+    <input type="button" value="再プレイ" class="play_again">
+  </div>
+
+  <!-- ゲームクリア画面 -->
+  <div class="win">
+    <h1>You Win!!</h1>
+    <input type="button" value="再プレイ" class="play_again">
+  </div>
+
+
+  <!-- js読み込み用 -->
+  <script type="text/javascript" src="hard.js"></script>
+
+
+</body>
+
+</html>

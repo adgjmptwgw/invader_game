@@ -1,0 +1,345 @@
+
+body{
+  background-color: black;
+  width: 1420px;
+  height: 970px;
+  background-image: url(https://assets.media-platform.com/bi/dist/images/2019/11/28/5ddd9b12fd9db20a1e02033a-w960.png);
+  background-repeat: no-repeat;
+  background-position: 400px 700px;
+  overflow: hidden;
+  }
+
+.display-none{
+  display: none;
+}
+
+
+#player{ /* 戦闘機のポジション */
+  bottom: 105px;
+  left: 600px;
+  position: absolute;
+
+  transform: rotate(90deg);
+  user-select: none; 
+  }
+
+#player img{  /* 戦闘機の画像 */
+  width: 130px;
+  height: auto;
+  transform: rotate(-90deg);
+}
+
+.game_over{ 
+  font-size: 400%;
+  font-weight: 200;
+  position: absolute;
+  left: 600px;
+  bottom: 350px;
+  color: #fff;
+  z-index: 3;
+  display: none;
+}
+
+.win{
+  font-size: 400%;
+  font-weight: 200;
+  position: absolute;
+  left: 600px;
+  bottom: 350px;
+  color: black;
+  z-index: 3;
+  display: none;
+}
+
+.play_again{
+  font-size: large;
+  margin-left: 100px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.play_again:hover{
+  opacity: 0.6;
+}
+
+.invader1,.invader2,.invader3,.invader4,.invader5,.invader6,.invader7,.invader8,.invader9,.invader10{   /* インベーダーの動き */
+  width: 130px;
+  height: auto;
+  transition: all 300ms 0s;
+  animation: anim 10s forwards;
+  animation-timing-function: linear;
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  z-index: 0;
+  user-select: none;
+}
+.invader2{   /* インベーダーの動き */
+  left: 170px;
+}
+.invader3{   /* インベーダーの動き */
+  left: 300px;
+}
+.invader4{   /* インベーダーの動き */
+  left: 430px;
+}
+.invader5{   /* インベーダーの動き */
+  left: 560px;
+}
+.invader6{   /* インベーダーの動き */
+  left: 690px;
+}
+.invader7{   /* インベーダーの動き */
+  left: 820px;
+}
+.invader8{   /* インベーダーの動き */
+  left: 950px;
+}
+.invader9{   /* インベーダーの動き */
+  left: 1080px;
+}
+.invader10{   /* インベーダーの動き */
+  left: 1210px;
+}
+
+/* インベーダーA */
+.invaderA1,.invaderA2,.invaderA3,.invaderA4,.invaderA5,.invaderA6,.invaderA7,.invaderA8,.invaderA9,.invaderA10{
+  width: 130px;
+  height: auto;
+  margin-top: 15px;
+  transition: all 300ms 0s;
+  animation: anim 5s forwards;
+  animation-timing-function: linear;
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  z-index: 0;
+  user-select: none;
+}
+.invaderA2{   /* インベーダーの動き */
+  left: 170px;
+}
+.invaderA3{   /* インベーダーの動き */
+  animation: anim 10s forwards;
+  left: 300px;
+}
+.invaderA4{   /* インベーダーの動き */
+  left: 430px;
+}
+.invaderA5{   /* インベーダーの動き */
+  left: 560px;
+}
+.invaderA6{   /* インベーダーの動き */
+  left: 690px;
+}
+.invaderA7{   /* インベーダーの動き */
+  left: 820px;
+}
+.invaderA8{   /* インベーダーの動き */
+  left: 950px;
+}
+.invaderA9{   /* インベーダーの動き */
+  left: 1080px;
+}
+.invaderA10{   /* インベーダーの動き */
+  left: 1210px;
+}
+
+/* インベーダーB */
+.invaderB1,.invaderB2,.invaderB3,.invaderB4,.invaderB5,.invaderB6,.invaderB7,.invaderB8,.invaderB9,.invaderB10,.gs{
+  width: 100px;
+  height: auto;
+  transition: all 300ms 0s;
+  animation: anim 3s forwards;
+  animation-timing-function: linear;
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  z-index: 0;
+  user-select: none;
+}
+
+.gs{
+  left: 430px;
+}
+
+.invaderB2{   /* インベーダーの動き */
+  left: 170px;
+}
+.invaderB3{   /* インベーダーの動き */
+  left: 300px;
+}
+.invaderB4{   /* インベーダーの動き */
+  left: 430px;
+}
+.invaderB5{   /* インベーダーの動き */
+  left: 560px;
+}
+.invaderB6{   /* インベーダーの動き */
+  left: 690px;
+}
+.invaderB7{   /* インベーダーの動き */
+  left: 820px;
+}
+.invaderB8{   /* インベーダーの動き */
+  left: 950px;
+}
+.invaderB9{   /* インベーダーの動き */
+  left: 1080px;
+}
+.invaderB10{   /* インベーダーの動き */
+  left: 1210px;
+}
+
+/* インベーダーC */
+.invaderC{
+  width: 650px;
+  height: auto;
+  display: flex;
+  margin-left: 200px;
+  /* transition: all 300ms 0s;
+  animation: anim 6s forwards;
+  animation-timing-function: linear; */
+  position: absolute;
+  top: 0px;
+  left: 170px;
+  z-index: 1;
+  user-select: none;
+}
+
+
+@keyframes anim {  
+  0% {
+  transform: translateY(0px);
+  }
+
+  /* 99%{
+    opacity: 1;
+  } */
+ 
+  100% {
+    /* opacity: 0; */
+    transform: translateY(600px);
+  }
+}  /* インベーダーの動き...ここまで */
+
+  
+.laser{  /* レーザービーム */
+  background-color:  skyblue;
+  width: 2px;
+  height: 1000px;
+
+  position: relative;
+  bottom: 563px;
+  right:484px;
+  transform: rotate(90deg);
+  
+  display: none;
+}
+.laser2{  /* レーザービーム2 */
+  background-color:  skyblue;
+  width: 10px;
+  height: 1000px;
+/* 563px; 484px; */
+  position: absolute;
+  top: -434px; 
+  right: 600px; 
+  transform: rotate(90deg);
+}
+.laser3{  /* レーザービーム3 */
+  background-color:  yellow;
+  height: 1000px;
+
+  position: relative;
+  bottom: 563px;
+  right:650px;
+  transform: rotate(90deg);
+  border-radius: 30%;
+}
+
+.laser4{  /* レーザービーム3 */
+  background-color:  yellow;
+  width: 170px;
+  height: 1000px;
+
+  position: relative;
+  bottom: 563px;
+  right:650px;
+  transform: rotate(90deg);
+  border-radius: 30%;
+}
+
+
+.janken{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: yellow;
+  width: 500px;
+  height: auto;
+  margin-left: 200px;
+  opacity: 0.7;
+  user-select: none;
+  position: relative;
+  z-index: 2;
+}
+
+#result,#result2{
+  font-size: 200%;
+}
+
+#result2{
+  color: red;
+}
+
+.janken span{
+  margin: 30px auto 30px auto;
+}
+.center{
+  width: 300px;
+  height: 45%;
+  margin: 300px auto 0;
+  text-align: center;
+}
+
+h1{   /* スタートボタン */ 
+  font-size: 40px;
+}
+.title{
+  color: #fff;
+}
+
+.btn:hover{
+  opacity: 0.6;
+}
+.start-btn > input{
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 12px;
+  border: none;
+  width: 100%;
+  height: 38px;
+  padding: 10px 10p;
+  display: block;
+  cursor: pointer;
+}
+
+#closeGift,#openGift,#openLost,#bom{
+  width: 100px;
+  height: auto;
+}
+
+#bom,#magazine,#AV,#toy{
+  display: none;
+}
+
+#magazine,#toy{
+  width: 300px;
+  height: auto;
+}
+
+#AV{
+  width: auto;
+  height: 250px;
+}
+
